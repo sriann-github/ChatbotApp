@@ -1,0 +1,100 @@
+category_Id,category_name,subcategory_Id,subcategory_name
+100,Website Performance,101,Slow Page Load
+100,Website Performance,102,Server Downtime
+100,Website Performance,103,High Response Time
+100,Website Performance,104,CDN Issues
+100,Website Performance,105,Caching Problems
+100,Website Performance,106,Image Loading Issues
+100,Website Performance,107,Broken Links
+100,Website Performance,108,CSS Not Loading
+100,Website Performance,109,JavaScript Errors
+100,Website Performance,110,Third-Party Script Issues
+200,Checkout Failures,201,Payment Gateway Error
+200,Checkout Failures,202,Order Processing Failure
+200,Checkout Failures,203,Cart Not Updating
+200,Checkout Failures,204,Shipping Address Error
+200,Checkout Failures,205,Tax Calculation Issues
+200,Checkout Failures,206,Order Duplication
+200,Checkout Failures,207,Invalid Promo Code
+200,Checkout Failures,208,Discount Calculation Errors
+200,Checkout Failures,209,Checkout Timeout
+200,Checkout Failures,210,Guest Checkout Not Working
+300,User Authentication Issues,301,Login Failures
+300,User Authentication Issues,302,Password Reset Issues
+300,User Authentication Issues,303,Two-Factor Authentication Failure
+300,User Authentication Issues,304,OAuth Token Expiry
+300,User Authentication Issues,305,Session Timeout
+300,User Authentication Issues,306,Account Creation Errors
+300,User Authentication Issues,307,Social Login Failures
+300,User Authentication Issues,308,Email Confirmation Error
+300,User Authentication Issues,309,Invalid Credentials
+400,Product Catalog,401,Missing Products
+400,Product Catalog,402,Search Issues
+400,Product Catalog,403,Incorrect Prices
+400,Product Catalog,404,Product Unavailable
+400,Product Catalog,405,Outdated Stock Information
+400,Product Catalog,406,Product Description Errors
+400,Product Catalog,407,Product Image Missing
+400,Product Catalog,408,Category Not Displaying
+400,Product Catalog,409,Related Products Missing
+400,Product Catalog,410,Product Filtering Issues
+500,Order Fulfillment,501,Shipping Delays
+500,Order Fulfillment,502,Tracking Number Errors
+500,Order Fulfillment,503,Order Not Processed
+500,Order Fulfillment,504,Warehouse Stock Errors
+500,Order Fulfillment,505,Incorrect Order Shipment
+500,Order Fulfillment,506,Order Cancellation Failed
+500,Order Fulfillment,507,Order Not Received
+500,Order Fulfillment,508,Return Not Processed
+500,Order Fulfillment,509,Exchange Delays
+500,Order Fulfillment,510,Wrong Order Status
+600,Promotions and Discounts,601,Promo Code Not Working
+600,Promotions and Discounts,602,Discount Misapplied
+600,Promotions and Discounts,603,Sale Price Incorrect
+600,Promotions and Discounts,604,Discount Expired Early
+600,Promotions and Discounts,605,Promotion Not Visible
+600,Promotions and Discounts,606,Free Shipping Not Applied
+600,Promotions and Discounts,607,Bundle Discount Error
+600,Promotions and Discounts,608,Flash Sale Issue
+600,Promotions and Discounts,609,Promotion Overlapping
+600,Promotions and Discounts,610,Loyalty Points Not Applied
+700,Customer Support Integration,701,Live Chat Unavailable
+700,Customer Support Integration,702,Support Ticket Delays
+700,Customer Support Integration,703,Incorrect Support Information
+700,Customer Support Integration,704,Automated Response Error
+700,Customer Support Integration,705,Chatbot Not Responding
+700,Customer Support Integration,706,Support Ticket Not Created
+700,Customer Support Integration,707,Escalation Failure
+700,Customer Support Integration,708,Callback Request Failed
+700,Customer Support Integration,709,Support Chat Disconnected
+700,Customer Support Integration,710,No Support Agent Available
+800,Security Breaches,801,Unauthorized Access
+800,Security Breaches,802,Suspicious Activity
+800,Security Breaches,803,Data Breach
+800,Security Breaches,804,Phishing Attempt
+800,Security Breaches,805,Account Compromise
+800,Security Breaches,806,Malware Detection
+800,Security Breaches,807,SQL Injection
+800,Security Breaches,808,Cross-Site Scripting (XSS)
+800,Security Breaches,809,Brute Force Attack
+800,Security Breaches,810,Privilege Escalation
+900,Database Failures,901,Connection Timeout
+900,Database Failures,902,Data Corruption
+900,Database Failures,903,Synchronization Issues
+900,Database Failures,904,Database Migration Errors
+900,Database Failures,905,Query Performance Issues
+900,Database Failures,906,Data Backup Failure
+900,Database Failures,907,Data Loss
+900,Database Failures,908,Primary Key Violation
+900,Database Failures,909,Foreign Key Constraint Error
+900,Database Failures,910,Database Locking
+1000,API Failures,1001,Third-Party Service Error
+1000,API Failures,1002,API Response Timeout
+1000,API Failures,1003,Incorrect API Data
+1000,API Failures,1004,Authentication Failure
+1000,API Failures,1005,Rate Limiting
+1000,API Failures,1006,Webhook Failure
+1000,API Failures,1007,API Key Expiry
+1000,API Failures,1008,Invalid API Request
+1000,API Failures,1009,Malformed Response
+1000,API Failures,2000,API Versioning Issues
