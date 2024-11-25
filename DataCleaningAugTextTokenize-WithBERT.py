@@ -1,12 +1,24 @@
 import pandas as pd
+import pdb
 import torch
 from transformers import BertTokenizer, BertModel
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.cluster import KMeans
 import numpy as np
+import os
 
 # Load data
-incidents_df = pd.read_csv('.Chatbot/Data Files/11-17-Incidents-dedupe/incidents_table.csv')
+print(os.path.abspath('Data Files/11-17-Incidents-dedupe/incidents_table.csv'))
+
+# with open('Data Files/11-17-Incidents-dedupe/incidents_table.csv', 'r') as file:
+    # print(file.read())
+    
+incidents_df = pd.read_csv('Data Files/11-17-Incidents-dedupe/incidents_table.csv', encoding='latin1')  # Or encoding='ISO-8859-1'
+print(incidents_df.head(10))  # Displays the first 5 rows by default
+
+#incidents_df = pd.read_csv('Data Files/11-17-Incidents-dedupe/incidents_table.csv')
+
+# pdb.set_trace()
 
 # Initialize BERT model and tokenizer
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
@@ -31,16 +43,12 @@ def detect_duplicates(df, column_name, threshold=0.9):
                 duplicates.append((i, j))
     return duplicates
 
-duplicates = detect_duplicates(incidents_df, 'description_embedding')
-
 # Example: Data Labeling using Clustering
 def label_with_clustering(df, column_name, num_clusters=5):
     embeddings = np.stack(df[column_name].values)
     kmeans = KMeans(n_clusters=num_clusters, random_state=42).fit(embeddings)
     df['cluster_label'] = kmeans.labels_
     return df
-
-incidents_df = label_with_clustering(incidents_df, 'description_embedding')
 
 # Example: Data Augmentation - Nearest Neighbor Sampling
 def augment_with_neighbors(df, column_name, num_neighbors=3):
@@ -56,21 +64,16 @@ def augment_with_neighbors(df, column_name, num_neighbors=3):
     df['augmented_texts'] = augmented_texts
     return df
 
-incidents_df = augment_with_neighbors(incidents_df, 'description_embedding')
-
-print("BERT-based text processing completed.")
-
-def main();
+def main():
+    print('main')
     # Generate embeddings for Incident_Description
     incidents_df['description_embedding'] = incidents_df['Incident_Description'].apply(lambda x: get_bert_embedding(x).flatten())
+    
+    duplicates = detect_duplicates(incidents_df, 'description_embedding')
+    incidents_df = label_with_clustering(incidents_df, 'description_embedding')
+    incidents_df = augment_with_neighbors(incidents_df, 'description_embedding')
+    print("BERT-based text processing completed.")
 
-
-
-
-
-
-
-
-
+    
 if __name__ == "__main__":
     main()
