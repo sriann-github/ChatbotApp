@@ -14,7 +14,6 @@ print(os.path.abspath('Data Files/11-17-Incidents-dedupe/incidents_table.csv'))
     # print(file.read())
     
 incidents_df = pd.read_csv('Data Files/11-17-Incidents-dedupe/incidents_table.csv', encoding='latin1')  # Or encoding='ISO-8859-1'
-print(incidents_df.head(10))  # Displays the first 5 rows by default
 
 #incidents_df = pd.read_csv('Data Files/11-17-Incidents-dedupe/incidents_table.csv')
 
@@ -66,6 +65,8 @@ def augment_with_neighbors(df, column_name, num_neighbors=3):
 
 def main():
     print('main')
+    incidents_df = pd.read_csv('Data Files/11-17-Incidents-dedupe/incidents_table.csv', encoding='latin1')  # Or encoding='ISO-8859-1'
+    print(incidents_df.head(10))  # Displays the first 5 rows by default
     # Generate embeddings for Incident_Description
     incidents_df['description_embedding'] = incidents_df['Incident_Description'].apply(lambda x: get_bert_embedding(x).flatten())
     
